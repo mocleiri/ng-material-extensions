@@ -36,10 +36,10 @@
     "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4",
     "marked": "^0.8.0",
-    "ngx-markdown": "^9.0.0-beta.0",
+    "ngx-markdown": "^10.1.1",
     "node-sass": "^4.13.1",
     "prismjs": "^1.17.1",
-    "rxjs": "~6.5.4",
+    "rxjs": "~6.6.3",
     "tslib": "^2.0.1",
     "xlsx": "^0.14.1",
     "zone.js": "~0.10.3"
