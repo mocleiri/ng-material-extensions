@@ -34,15 +34,14 @@ import { BriefExporterComponent } from './components/examples/brief-exporter/bri
 import { CustomExporterComponent } from './components/examples/custom-exporter/custom-exporter.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { SelectionExporterComponent } from './components/examples/selection-exporter/selection-exporter.component';
+import {SafeHtmlPipe} from './components/pipe/safe-html-pipe';
 
 export function markedOptions(): MarkedOptions {
 
   return {
     gfm: true,
-    tables: true,
     breaks: false,
     pedantic: false,
-    sanitize: false,
     smartLists: true,
     smartypants: false,
   };
@@ -61,7 +60,8 @@ export function markedOptions(): MarkedOptions {
     PropertyOptionsComponent,
     BriefExporterComponent,
     CustomExporterComponent,
-    SelectionExporterComponent
+    SelectionExporterComponent,
+    SafeHtmlPipe
   ],
   imports: [
     HttpClientModule,
@@ -93,15 +93,14 @@ export function markedOptions(): MarkedOptions {
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [
-    ArrayFilterComponent,
-    BriefExporterComponent,
-    CustomColumnFilterComponent,
-    CustomExporterComponent,
-    SimpleFilterComponent,
-    PropertyOptionsComponent,
-    SelectionExporterComponent
-
-  ]
+  // entryComponents: [
+  //   ArrayFilterComponent,
+  //   BriefExporterComponent,
+  //   CustomColumnFilterComponent,
+  //   CustomExporterComponent,
+  //   SimpleFilterComponent,
+  //   PropertyOptionsComponent,
+  //   SelectionExporterComponent
+  // ]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 
-import { BaseComponent } from './../base-component';
+import { BaseComponent } from '../base-component';
 import { Component, OnInit } from '@angular/core';
-import { showCaseExamples } from '../add-to-showcase';
+import {ShowcaseService} from '../add-to-showcase';
 
 @Component({
   selector: 'app-exporter',
@@ -10,8 +10,13 @@ import { showCaseExamples } from '../add-to-showcase';
 })
 export class ExporterComponent extends BaseComponent implements OnInit {
 
+
+  constructor(private showcaseService: ShowcaseService) {
+    super();
+  }
+
   ngOnInit() {
-    this.examples = showCaseExamples.get('exporter');
+    this.examples = this.showcaseService.getMatExporterExamples();
   }
 
 }

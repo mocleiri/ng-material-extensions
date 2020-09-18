@@ -2,7 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { AddToShowCase } from '../../add-to-showcase';
+import { ShowcaseService} from '../../add-to-showcase';
 import { MatTableExporterDirective } from 'mat-table-exporter';
 
 @Component({
@@ -10,7 +10,6 @@ import { MatTableExporterDirective } from 'mat-table-exporter';
   templateUrl: './selection-exporter.component.html',
   styleUrls: ['./selection-exporter.component.css']
 })
-@AddToShowCase('exporter', 'selection-exporter.component', 'Selected Row Exporting Example')
 export class SelectionExporterComponent implements AfterViewInit, OnInit {
   title = 'mte-test';
   displayedColumns = ['select', 'position', 'name', 'surname', 'birth'];

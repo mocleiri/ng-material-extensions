@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddToShowCase } from '../../add-to-showcase';
+import {ShowcaseService} from '../../add-to-showcase';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatTableFilter } from 'mat-table-filter';
 
@@ -27,7 +27,6 @@ const SPACECRAFT_DATA: SpaceCraft[] = [
   templateUrl: './simple-filter.component.html',
   styleUrls: ['./simple-filter.component.css']
 })
-@AddToShowCase('filter', 'simple-filter.component', 'Simple Filter')
 export class SimpleFilterComponent implements OnInit {
   filterEntity: SpaceCraft;
   filterType: MatTableFilter;

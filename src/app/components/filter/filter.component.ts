@@ -1,4 +1,4 @@
-import { showCaseExamples } from './../add-to-showcase';
+import {ShowcaseService} from '../add-to-showcase';
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../base-component';
 
@@ -9,8 +9,12 @@ import { BaseComponent } from '../base-component';
 })
 export class FilterComponent extends BaseComponent implements OnInit {
 
+  constructor(private showcaseService: ShowcaseService) {
+    super();
+  }
+
   ngOnInit() {
-    this.examples = showCaseExamples.get('filter');
+    this.examples = this.showcaseService.getMatFilterExamples();
   }
 
 }

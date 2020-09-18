@@ -15,8 +15,7 @@
     "@angular/cdk": "^10.2.1"
   },
   "dependencies": {
-    "file-saver": "^2.0.2",
-    "xlsx": "^0.14.1"
+    "file-saver": "^2.0.2"
   },
   "scripts": {
     "lint": "node_modules/.bin/goodparts lib"

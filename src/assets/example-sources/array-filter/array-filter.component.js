@@ -1,7 +1,8 @@
 import { MatTableFilter } from 'mat-table-filter';
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource, MatChipInputEvent } from '@angular/material';
+import { MatTableDataSource } from '@angular/material/table';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material/chips';
 
 export class Product {
   category: string;

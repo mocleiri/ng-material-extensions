@@ -1,6 +1,6 @@
 import { MatTableFilter } from 'mat-table-filter';
 import { Component, OnInit } from '@angular/core';
-import { AddToShowCase } from '../../add-to-showcase';
+import {ShowcaseService} from '../../add-to-showcase';
 import { MatTableDataSource } from '@angular/material/table';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
@@ -34,7 +34,6 @@ const PRODUCTS: Product[] = [
   templateUrl: './array-filter.component.html',
   styleUrls: ['./array-filter.component.css']
 })
-@AddToShowCase('filter', 'array-filter.component', 'Array Filter')
 export class ArrayFilterComponent implements OnInit {
   filterEntity: Product;
   filterType: MatTableFilter;

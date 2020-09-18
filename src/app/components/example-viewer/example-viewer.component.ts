@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ComponentPortal, ComponentType } from '@angular/cdk/portal';
+import {ShowcaseExample} from '../add-to-showcase';
 
 @Component({
   selector: 'app-example-viewer',
@@ -16,10 +17,10 @@ export class ExampleViewerComponent {
   description: string;
   stackBlitzLink: string;
   @Input()
-  set exampleType(type: ComponentType<any>) {
-    this.example = new ComponentPortal(type);
-    this.fileName = type.prototype.fileName;
-    this.description = type.prototype.description;
+  set exampleType(type: ShowcaseExample) {
+    this.example = new ComponentPortal(type.component);
+    this.fileName = type.selector + '.component';
+    this.description = type.description;
     // this.stackBlitzLink = type.prototype.stackBlitzLink;
     this.htmlDoc = this.resolveFilePath('.html'); // Will be replaced with a more convinient webpack/bazel solution
     this.tsDoc =  this.resolveFilePath('.js');

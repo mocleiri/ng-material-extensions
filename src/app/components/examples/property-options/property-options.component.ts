@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddToShowCase } from '../../add-to-showcase';
+import {ShowcaseService} from '../../add-to-showcase';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatTableFilter, PropertyOptions } from 'mat-table-filter';
 
@@ -27,7 +27,6 @@ const SPACECRAFT_DATA: SpaceCraft[] = [
   templateUrl: './property-options.component.html',
   styleUrls: ['./property-options.component.css']
 })
-@AddToShowCase('filter', 'property-options.component', 'Changing Property Options')
 export class PropertyOptionsComponent implements OnInit {
   filterEntity: SpaceCraft;
   filterType: MatTableFilter;
